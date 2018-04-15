@@ -1,0 +1,280 @@
+-I- Waiting ...
+-I- TCL platform : Windows NT
+-I- SAM-BA 2.11  on : windows
+-I- Retrieved arguments from command line :
+-I- argv 0 : \jlink\ARM0
+-I- argv 1 : AT91SAM9X35-EK
+-I- argv 2 : at91sam9x5ek_demo_linux_nandflash_lcd043.tcl
+0
+\jlink\ARM0
+-I- Connection : \jlink\ARM0 (target(comType) = 2)
+-I- Board : at91sam9x35-ek
+-I- Traces Level : 4
+-I- target(handle) : 53578528
+Read device Chip ID at 0xfffff240 --- get 0x819a05a1
+-I- Found processor : at91sam9g15 (Chip ID : 0x819a05a1)
+sourcing device file D:/Program Files (x86)/ATMEL Corporation/sam-ba_2.11/sam-ba.exe/../tcl_lib/devices/at91sam9g15.tcl
+sourcing board description file D:/Program Files (x86)/ATMEL Corporation/sam-ba_2.11/sam-ba.exe/../tcl_lib/at91sam9g15-ek/at91sam9g15-ek.tcl
+-I- Loading applet applet-lowlevelinit-sam9g15.bin at address 0x300000
+-I- Memory Size : 0x2 bytes
+-I- Buffer address : 0x4
+-I- Buffer size: 0x0 bytes
+-I- Applet initialization done
+-I- Low level initialized
+-I- External RAM Settings :  extRamVdd=0, extRamType=1, extRamDataBusWidth=32, extDDRamModel=0
+-I- External RAM Settings :  extRamVdd=0, extRamType=1, extRamDataBusWidth=32, extDDRamModel=0
+-I- Loading applet applet-extram-sam9g15.bin at address 0x300000
+-I- Memory Size : 0x8000000 bytes
+-I- Buffer address : 0x0
+-I- Buffer size: 0x0 bytes
+-I- Applet initialization done
+-I- External RAM initialized
+-I- Command line mode : Execute script file : at91sam9x5ek_demo_linux_nandflash_lcd043.tcl
+-I- === Initialize the NAND access ===
+-I- NANDFLASH::Init (trace level : 4)
+-I- Loading applet applet-nandflash-sam9g15.bin at address 0x20000000
+-I- Memory Size : 0x10000000 bytes
+-I- Buffer address : 0x20010954
+-I- Buffer size: 0x20000 bytes
+-I- Applet initialization done
+ - By default PMECC is activated, 
+    - By default, The pmecc computation is based on a sector of 512 bytes,
+    - By default, correcting capability for pmecc is retrieved from ONFI parameter,
+    - By default, offset of the first ecc byte in spare zone is '2',
+    - To config pmecc parameter, using 'NANDFLASH::SetNandHeaderValue pmeccParam pmeccParamValue' command,
+       - Type  'NANDFLASH::SetNandHeaderValue '  to dispaly current pmecc configuration.
+       - Type  'NANDFLASH::SetNandHeaderValue ?'  to get help for pmecc setting,
+- To active software ECC, using 'Enable Software ECC' command,
+    - Recommand to erase all after the ecc mode switch between software ECC & pmecc.
+-I- === Enable PMECC OS Parameters ===
+   - HEADER value  is 0xC0C00405
+-I- Pmecc header configration successful
+-I- PMECC configure c0c00405
+-I- === Erase all the NAND flash blocs and test the erasing ===
+-I- GENERIC::EraseAll
+-I- === Load the bootstrap: nandflash_at91sam9-ek in the first sector ===
+Sending boot file done.
+-I- === Load the u-boot image ===
+-I- Send File u-boot.bin at address 0x00040000
+GENERIC::SendFile u-boot.bin at address 0x40000
+-I- File size : 0x42158 byte(s)
+-I- Complete 0%
+-I- 	Writing: 0x20000 bytes at 0x40000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 48%
+-I- 	Writing: 0x20000 bytes at 0x60000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 96%
+-I- 	Writing: 0x2158 bytes at 0x80000 (buffer addr : 0x20010954)
+-I- 	0x2158 bytes written by applet
+-I- === Load the Kernel image ===
+-I- Send File uImage at address 0x00200000
+GENERIC::SendFile uImage at address 0x200000
+-I- File size : 0x2DB428 byte(s)
+-I- Complete 0%
+-I- 	Writing: 0x20000 bytes at 0x200000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 4%
+-I- 	Writing: 0x20000 bytes at 0x220000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 8%
+-I- 	Writing: 0x20000 bytes at 0x240000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 13%
+-I- 	Writing: 0x20000 bytes at 0x260000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 17%
+-I- 	Writing: 0x20000 bytes at 0x280000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 21%
+-I- 	Writing: 0x20000 bytes at 0x2A0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 26%
+-I- 	Writing: 0x20000 bytes at 0x2C0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 30%
+-I- 	Writing: 0x20000 bytes at 0x2E0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 35%
+-I- 	Writing: 0x20000 bytes at 0x300000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 39%
+-I- 	Writing: 0x20000 bytes at 0x320000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 43%
+-I- 	Writing: 0x20000 bytes at 0x340000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 48%
+-I- 	Writing: 0x20000 bytes at 0x360000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 52%
+-I- 	Writing: 0x20000 bytes at 0x380000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 56%
+-I- 	Writing: 0x20000 bytes at 0x3A0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 61%
+-I- 	Writing: 0x20000 bytes at 0x3C0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 65%
+-I- 	Writing: 0x20000 bytes at 0x3E0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 70%
+-I- 	Writing: 0x20000 bytes at 0x400000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 74%
+-I- 	Writing: 0x20000 bytes at 0x420000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 78%
+-I- 	Writing: 0x20000 bytes at 0x440000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 83%
+-I- 	Writing: 0x20000 bytes at 0x460000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 87%
+-I- 	Writing: 0x20000 bytes at 0x480000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 91%
+-I- 	Writing: 0x20000 bytes at 0x4A0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 96%
+-I- 	Writing: 0x1B428 bytes at 0x4C0000 (buffer addr : 0x20010954)
+-I- 	0x1B428 bytes written by applet
+-I- === Enable trimffs ===
+-I- === Load the linux file system ===
+-I- Send File ubi60.img at address 0x00800000
+GENERIC::SendFile ubi60.img at address 0x800000
+-I- File size : 0x2720000 byte(s)
+-I- Complete 0%
+-I- 	Writing: 0x20000 bytes at 0x800000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 0%
+-I- 	Writing: 0x20000 bytes at 0x820000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 0%
+-I- 	Writing: 0x20000 bytes at 0x840000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 0%
+-I- 	Writing: 0x20000 bytes at 0x860000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 1%
+-I- 	Writing: 0x20000 bytes at 0x880000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 1%
+-I- 	Writing: 0x20000 bytes at 0x8A0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 1%
+-I- 	Writing: 0x20000 bytes at 0x8C0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 2%
+-I- 	Writing: 0x20000 bytes at 0x8E0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 2%
+-I- 	Writing: 0x20000 bytes at 0x900000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 2%
+-I- 	Writing: 0x20000 bytes at 0x920000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 3%
+-I- 	Writing: 0x20000 bytes at 0x940000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 3%
+-I- 	Writing: 0x20000 bytes at 0x960000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 3%
+-I- 	Writing: 0x20000 bytes at 0x980000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 4%
+-I- 	Writing: 0x20000 bytes at 0x9A0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 4%
+-I- 	Writing: 0x20000 bytes at 0x9C0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 4%
+-I- 	Writing: 0x20000 bytes at 0x9E0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 5%
+-I- 	Writing: 0x20000 bytes at 0xA00000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 5%
+-I- 	Writing: 0x20000 bytes at 0xA20000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 5%
+-I- 	Writing: 0x20000 bytes at 0xA40000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 6%
+-I- 	Writing: 0x20000 bytes at 0xA60000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 6%
+-I- 	Writing: 0x20000 bytes at 0xA80000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 6%
+-I- 	Writing: 0x20000 bytes at 0xAA0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 7%
+-I- 	Writing: 0x20000 bytes at 0xAC0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 7%
+-I- 	Writing: 0x20000 bytes at 0xAE0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 7%
+-I- 	Writing: 0x20000 bytes at 0xB00000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 7%
+-I- 	Writing: 0x20000 bytes at 0xB20000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 8%
+-I- 	Writing: 0x20000 bytes at 0xB40000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 8%
+-I- 	Writing: 0x20000 bytes at 0xB60000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 8%
+-I- 	Writing: 0x20000 bytes at 0xB80000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 9%
+-I- 	Writing: 0x20000 bytes at 0xBA0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 9%
+-I- 	Writing: 0x20000 bytes at 0xBC0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 9%
+-I- 	Writing: 0x20000 bytes at 0xBE0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 10%
+-I- 	Writing: 0x20000 bytes at 0xC00000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 10%
+-I- 	Writing: 0x20000 bytes at 0xC20000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 10%
+-I- 	Writing: 0x20000 bytes at 0xC40000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 11%
+-I- 	Writing: 0x20000 bytes at 0xC60000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 11%
+-I- 	Writing: 0x20000 bytes at 0xC80000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 11%
+-I- 	Writing: 0x20000 bytes at 0xCA0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 12%
+-I- 	Writing: 0x20000 bytes at 0xCC0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 12%
+-I- 	Writing: 0x20000 bytes at 0xCE0000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 12%
+-I- 	Writing: 0x20000 bytes at 0xD00000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 13%
+-I- 	Writing: 0x20000 bytes at 0xD20000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 13%
+-I- 	Writing: 0x20000 bytes at 0xD40000 (buffer addr : 0x20010954)
+-I- 	0x20000 bytes written by applet
+-I- Complete 13%
+-I- 	Writing: 0x20000 bytes at 0xD60000 (buffer addr : 0x20010954)
+-E- Can't send data (expected integer but got "-E- Timeout: The applet did not return. Please che")
+-I- === DONE. ===
